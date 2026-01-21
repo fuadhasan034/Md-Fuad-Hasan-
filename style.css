@@ -325,3 +325,58 @@ body {
         font-size: 13px;
     }
 }
+/* ===== PREMIUM LOGO ===== */
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circle logo with premium shadow */
+.logo-box img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    transition: all 0.4s ease;
+}
+
+/* Hover premium effect */
+.logo-box img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+}
+
+/* Typing text */
+#typing-text {
+    margin-top: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    border-right: 2px solid #111;
+    padding-right: 4px;
+    animation: blink 0.8s infinite;
+}
+
+/* Cursor blink */
+@keyframes blink {
+    0% { border-color: transparent; }
+    50% { border-color: #111; }
+    100% { border-color: transparent; }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .logo-box img {
+        width: 46px;
+        height: 46px;
+    }
+
+    #typing-text {
+        font-size: 13px;
+    }
+}
