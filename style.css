@@ -231,4 +231,41 @@ body {
     font-size: 46px;
   }
 }
+/* =====================
+   LOGO PROFILE STYLE
+===================== */
+.logo-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6c63ff;
+}
+
+.logo-name {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.5px;
+}
+
+/* Desktop size */
+@media (min-width: 768px) {
+  .logo-image {
+    width: 56px;
+    height: 56px;
+  }
+
+  .logo-name {
+    font-size: 14px;
+  }
+}
 
