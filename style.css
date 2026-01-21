@@ -269,3 +269,59 @@ body {
   }
 }
 
+/* ===== Animated Logo ===== */
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circle logo + shadow */
+.logo-box img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.logo-box img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+/* Animated name */
+.logo-name {
+    margin-top: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    animation: nameFade 2s ease forwards;
+}
+
+/* Name animation */
+@keyframes nameFade {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .logo-box img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-name {
+        font-size: 13px;
+    }
+}
